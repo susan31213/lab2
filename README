@@ -1,0 +1,7 @@
+g++ -c a.cpp
+g++ -c A.cpp
+g++ -o bmi a.o A.o
+./bmi
+
+產生一個名為bmi的執行檔
+輸入./bmi執行
