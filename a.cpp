@@ -1,11 +1,19 @@
 #include "a.h"
 Bmi::Bmi() { mess = 0; height = 0;}
-float Bmi::get() {
-	return (mess / height / height * 10000);
+float Bmi::getmess() {
+	return mess;
 }
-void Bmi::set(float h, float m) {
-	height = h;
+float Bmi::getheight() {
+	return height;
+}
+void Bmi::setmess(float m) {
 	mess = m;
+}
+void Bmi::setheight(float h) {
+	height = h;
+}
+float Bmi::returnbmi() {
+	return Bmi::getmess() / Bmi::getheight() / Bmi::getheight() * 10000;
 }
 string Bmi::category() {
 	float bmi = mess/height/height*10000;

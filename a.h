@@ -6,8 +6,11 @@ using namespace std;
 class Bmi{
 	public:
 		Bmi();
-		float get();
-		void set(float h, float m);
+		float getmess();
+		float getheight();
+		void setmess(float m);
+		void setheight(float h);
+		float returnbmi();
 		string category();
 	private:
 		float height;

@@ -22,8 +22,9 @@ int main()
 		while(inFile >> hei >> mess) {		//迴圈讀取資料
 			if(hei == 0 && mess == 0)		//若體重&身高都=0則結束
 				return 0;
-			b.set(hei,mess);				//輸入身高體重到object裡
-			outFile << setprecision(4) << b.get() << "\t" << b.category() << endl;		//輸出bmi和分類到輸出檔案裡
+			b.setmess(mess);				//輸入身高體重到object裡
+			b.setheight(hei);
+			outFile << setprecision(4) << b.returnbmi() << "\t" << b.category() << endl;		//輸出bmi和分類到輸出檔案裡
 		}
 		inFile.close();		//關閉檔案
 		outFile.close();	//關閉檔案
